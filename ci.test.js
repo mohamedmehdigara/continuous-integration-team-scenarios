@@ -12,7 +12,9 @@ describe('CI sequence', () => {
   });
 
   // TODO add the tests between these comments =>
-
+it('does not contain the sneaky bug', () => {
+  expect( /.*sneaky\s+bug.*/gi.test(fileContents)).toBe(false);
+});
   // TODO <= add the tests between these comments
 
 });
